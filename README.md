@@ -1,92 +1,96 @@
- VITYARTHI PROJECT : BUDGET TRACKER
- 
- PROJECT OVERVIEW : This project is a simple Python- based Budget Tracker designed to help the users manage their personal finances by recording daily expenses , categorising them and viewing summarized reportts . The application provides a menu driven interface where users can add expenses with details such as date , category , amount and description  and then generate summaries of total spending category .
+🚀 Project Overview
 
-Features of the project 
+This project is a simple Python-based Budget Tracker designed to help users manage their personal finances by recording daily expenses, categorizing them, and viewing summarized reports. The application provides a menu-driven interface, and all data is saved persistently using a CSV file to ensure nothing is lost.
 
-1 . Expense entry with details
-Users can add new expense by entering the date , category , amount and short descriptions
+✨ Features
 
-2. Category bases organization
-   Every expenses is tagged with a category so the user can see where most of the money is being spent
+Expense Entry with Details 📝: Users can add new expenses by entering the date, category, amount, and a short description.
 
-3. Storage using CSV
-   All expenses are stored in a CSV file , so the data is not lost when the program is closed and can be resued in future sessions .
+Category-Based Organization 🏷️: Every expense is tagged with a category, allowing the user to easily track where most of the money is being spent.
 
-4. Automatic summary of expenses
-The system can load all records and calculate the total spending per category , giving a clear summary of how much was spent in each category .
+Data Persistence (CSV) 💾: All expenses are stored in a human-readable file named expenses.csv, guaranteeing data persistence across program sessions.
 
-5. Graphic Visualization
-The project displaus a bar chart that shows total expenses per category helping users quickly understand their spending pattern.
+Automatic Summary of Expenses 📊: The system loads all records, calculates the total spending per category, and provides a clear, aggregated summary.
 
-6 . Simple menu driven interface
-The application is easy to use even for beginners . 
+Graphic Visualization 📈: The project displays a bar chart (powered by Matplotlib) showing total expenses per category, helping users quickly understand their spending patterns.
 
-TOOLS / TECHNOLOGIES USED
+Simple Menu-Driven Interface 💻: The application is easy to use and navigate, even for beginners.
 
-1. Python
-2.  Libraries / modules used
-   i) Pandas - used to load and store the data
-   ii) matplotlib - used to generate bar charts that visually show total expenses per category .
-  iii) os - used to chek if the csv file exists before loading it
-3. CSV file  - tp save all expense records
-4. Python interpreter : to run the script
+🛠️ Tools & Technologies Used
 
-Steps to install and run the project 
+Tool/Technology
+
+Purpose
+
+Python
+
+The core programming language.
+
+Pandas
+
+Used for efficient data loading, storing, and aggregation (summarizing) from the CSV file.
+
+Matplotlib
+
+Used to generate the graphical bar charts for visualization.
+
+OS Module
+
+Used to check if the data file exists before attempting to load it.
+
+CSV File
+
+The storage mechanism (expenses.csv) for all expense records.
+
+⬇️ Installation and Running
 
 1. Install Python
-i) Make sure Python 3.x is installed on your system
-ii) Verify installation by running python --version or python3 --version in your command prompt .
 
-2. Install Required libraries
-   i) Open command prompt
-   ii) Run the commands below to install required Python packages
-      ( pip install pandas matplotlib )
+Ensure Python 3.x is installed on your system.
 
-3 . Download Project files 
-Save the python script (budget_tracker.py) to a folder on your system . 
+Verify your installation by running python --version or python3 --version in your terminal.
 
-4. Run the program
-   i) Navigate to the project folder in command prompt
-   ii) Run the program by executing
-   (python / python3 budget_tracker.py )
+2. Install Required Libraries
 
-5 .Using the Program
- i) Choose “Add Expense” to add new spending records with date, category, amount, and description.
- ii)Choose “Show Summary” to view total spending per category and see a bar chart.
- iii)Choose “Exit” to close the application.
+Open your command prompt or terminal.
 
-6. Data Storage
+Run the command below to install the necessary Python packages (Pandas and Matplotlib):
 
-i) All expenses are saved automatically to expenses.csv in the project folder.
-ii) This file can be backed up or opened manually in a spreadsheet for inspection.
+pip install pandas matplotlib
 
-Instructions for testing 
 
-1. Verify Setup
-Ensure python and required libraries are installed  and the program runs without errors
+3. Download Project Files
 
-2. Test Adding Expenses
- i)Launch the program.
- ii)Choose the "Add Expense" option.
-iii)Enter valid inputs for date (e.g., 2025-11-22), category (choose from defined categories), amount (positive number), and description.
- iv)Verify the program confirms that the expense was added successfully.
-  v)Repeat to add multiple expenses across different categories and dates.
+Save the Python script (budget_tracker.py) to a local folder.
 
-3 . Test summary display 
-i) Choose the "Show Summary " option
-ii) Confirm that the total expenses by category are displayed correctly based on added data 
-iii) Verify that the bar chart accurately depicts these totals.
+4. Run the Program ▶️
 
-4 . Input Validation Checks
-i)Try entering an invalid category and verify that the program warns about it and does not add the expense.
-ii)Test inputting invalid amount formats (e.g., letters) and check for errors or prompts
+Navigate to the project folder in your command prompt.
 
-5.Persistence Testing
-i)Close the program and reopen it.
-ii)Show the summary without adding new expenses.
-iii)Confirm previously added expenses are retained and summaries reflect all records.
+Run the program by executing:
 
-6. Boundary Conditions
-i)Add an expense with the minimum possible amount (like 0.01).
-ii)Optionally, explore if the system handles an empty CSV gracefully when showing the summary.
+python budget_tracker.py
+# OR (depending on your system setup)
+python3 budget_tracker.py
+
+
+📋 Using the Program
+
+Choose 1. Add Expense to record new spending details.
+
+Choose 2. Show Summary & Visualization to view your totals and the bar chart.
+
+Choose 3. Exit to safely close the application.
+
+🧪 Instructions for Testing
+
+Verify Setup: Ensure all requirements are installed and the program starts without errors.
+
+Test Adding Expenses: Add several expenses across different categories and confirm the success message.
+
+Test Summary Display: Check that the calculated totals are correct and the bar chart accurately reflects the data.
+
+Input Validation Checks ❌: Test entering an invalid category or non-numeric amount to ensure the program handles these errors gracefully and prompts the user again.
+
+Persistence Testing ✅: Close the program and immediately re-open it. Choose 2. Show Summary—the expenses added in the previous session must be present (loaded from expenses.csv).
+
